@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 $board = [];
 
 for($x=0; $x < 8; $x++) {
@@ -12,6 +9,20 @@ for($x=0; $x < 8; $x++) {
 }
 
 
-var_dump($board);
+
+
+
+function drawBoard($board) {
+    for($x=0; $x < 8; $x++) {
+        for($y=0; $y < 8; $y++) {
+            echo $board[$x][$y] ?: ' ';
+            echo "|";
+        }
+        echo PHP_EOL;
+    }
+}
+
+
+drawBoard($board);
 
 //function($board, $propsedX, $proposedY);
